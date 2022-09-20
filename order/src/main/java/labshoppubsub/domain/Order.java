@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 import labshoppubsub.OrderApplication;
 import labshoppubsub.domain.OrderPlaced;
+import labshoppubsub.external.InventoryService;
 import lombok.Data;
 
 @Entity
