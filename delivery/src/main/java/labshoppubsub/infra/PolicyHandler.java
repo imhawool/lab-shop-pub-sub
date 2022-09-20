@@ -26,16 +26,16 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='OrderPlaced'"
     )
-    public void wheneverOrderPlaced_AddtoDeliveryList(
+    public void wheneverOrderPlaced_AddToDeliveryList(
         @Payload OrderPlaced orderPlaced
     ) {
         OrderPlaced event = orderPlaced;
         System.out.println(
-            "\n\n##### listener AddtoDeliveryList : " + orderPlaced + "\n\n"
+            "\n\n##### listener AddToDeliveryList : " + orderPlaced + "\n\n"
         );
 
         // Sample Logic //
-        Delivery.addtoDeliveryList(event);
+        Delivery.addToDeliveryList(event);
     }
     // keep
 
